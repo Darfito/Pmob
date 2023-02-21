@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:tougo/main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tougo/Pages/login_page.dart';
+import 'package:tougo/main.dart';
 
-
-class LoginPage extends StatelessWidget {
+class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+   final List<String> data = [
+      "Destinations",
+      "Stories",
+      "About Us"
+    ];
     return Scaffold(
-      body: Container(
+     body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/login_1.png"),
+                image: AssetImage("assets/images/landing_1.png"),
                 fit: BoxFit.cover)),
         child: Column(
           children: [
@@ -23,6 +29,19 @@ class LoginPage extends StatelessWidget {
                       color: Color.fromRGBO(188, 206, 236, 100),
                       shape: CircleBorder()),
                 ),
+                // DropdownButton(
+                //   onChanged: (value){
+                //     print(value);
+                //   },
+                //   items: data
+                //   .map(
+                //     (e) => DropdownMenuItem(
+                //       child: Text(e)
+                //       ),
+                //     )
+                //    .toList()
+                //   ),
+
                 IconButton(
                   onPressed: () {},
                   iconSize: 60,
@@ -34,49 +53,39 @@ class LoginPage extends StatelessWidget {
               ],
             ),
             Text(
-              "LOGIN",
+              "TOUGO",
               style: GoogleFonts.poppins(
                   fontSize: 48, fontWeight: FontWeight.w500),
             ),
-            //sign in biasa
-            Container(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  backgroundColor: const Color.fromRGBO(53, 66, 89, 100),
-                ),
-                child: Text(
-                  'Sign in',
-                  style: GoogleFonts.poppins(
-                      fontSize: 12, fontWeight: FontWeight.w500),
-                ),
-                onPressed: () {},
-              ),
+            Text(
+              "Lorem ipsum dolor sit amet consectetur",
+              style: GoogleFonts.poppins(
+                  fontSize: 16, fontWeight: FontWeight.w500),
             ),
-            // sign in gugel
             Container(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  backgroundColor: const Color.fromRGBO(255, 255, 255, 100),
+                  backgroundColor: const Color.fromRGBO(122, 150, 199, 100),
                 ),
                 child: Text(
-                  'Sign in',
+                  'Login',
                   style: GoogleFonts.poppins(
                       fontSize: 12, fontWeight: FontWeight.w500),
                 ),
                 onPressed: () {
-                  // Navigator.push(context, MaterialPageRoute)
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                    return LoginPage();
+                  }));
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
+

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:tougo/login_page.dart';
 import 'package:tougo/main.dart';
+import 'package:tougo/Pages/stories.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class LandingPage extends StatelessWidget {
+
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: Container(
+      body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/landing_1.png"),
+                image: AssetImage("assets/images/login_1.png"),
                 fit: BoxFit.cover)),
         child: Column(
           children: [
@@ -34,39 +35,56 @@ class LandingPage extends StatelessWidget {
               ],
             ),
             Text(
-              "TOUGO",
+              "LOGIN",
               style: GoogleFonts.poppins(
                   fontSize: 48, fontWeight: FontWeight.w500),
             ),
-            Text(
-              "Lorem ipsum dolor sit amet consectetur",
-              style: GoogleFonts.poppins(
-                  fontSize: 16, fontWeight: FontWeight.w500),
-            ),
+            //sign in biasa
             Container(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  backgroundColor: const Color.fromRGBO(122, 150, 199, 100),
+                  backgroundColor: const Color.fromRGBO(53, 66, 89, 100),
                 ),
                 child: Text(
-                  'Login',
+                  'Sign in',
                   style: GoogleFonts.poppins(
                       fontSize: 12, fontWeight: FontWeight.w500),
                 ),
                 onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                    return LoginPage();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Stories();
                   }));
                 },
               ),
             ),
+            // sign in gugel
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  backgroundColor: const Color.fromRGBO(255, 255, 255, 100),
+                ),
+                child: Text(
+                  'Sign in with google',
+                  style: GoogleFonts.poppins(
+                      fontSize: 12, 
+                      fontWeight: FontWeight.w500),
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Stories();
+                  }));
+                },
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
-
