@@ -71,7 +71,7 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.all(11.0),
             child: Container(
               height: 150,
-              color: Colors.orange,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -126,7 +126,7 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.all(11.0),
             child: Container(
               height: 150,
-              color: Colors.orange,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -181,7 +181,7 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.all(11.0),
             child: Container(
               height: 150,
-              color: Colors.orange,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -236,7 +236,7 @@ class Stories extends StatelessWidget {
             padding: const EdgeInsets.all(11.0),
             child: Container(
               height: 150,
-              color: Colors.orange,
+              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
