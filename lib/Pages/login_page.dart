@@ -5,6 +5,7 @@ import 'package:tougo/main.dart';
 import 'package:tougo/Pages/stories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
   // text editing controllers
@@ -138,7 +139,7 @@ class LoginPage extends StatelessWidget {
               backgroundColor: const Color.fromRGBO(53, 66, 89, 1.0),
             ),
             child: Text(
-              'Sign in with google',
+              'Sign in',
               style: GoogleFonts.poppins(
                   fontSize: 12, fontWeight: FontWeight.w500),
               selectionColor: Colors.white,
