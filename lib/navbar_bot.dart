@@ -27,7 +27,7 @@ class _NavbarState extends State<Navbar_bot> {
       bottomNavigationBar: Container(
         color: Color.fromRGBO(122, 150, 199, 1.0),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
           child: GNav(
               backgroundColor: Color.fromRGBO(122, 150, 199, 1.0),
               color: Colors.white,

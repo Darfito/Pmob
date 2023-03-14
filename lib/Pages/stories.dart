@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tougo/Pages/menu.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tougo/navbar_bot.dart';
 
 class Stories extends StatelessWidget {
   const Stories({super.key});

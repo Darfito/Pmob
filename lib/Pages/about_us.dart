@@ -13,7 +13,7 @@ class AboutUs extends StatelessWidget {
       backgroundColor: Color.fromRGBO(53, 66, 89, 1),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        toolbarHeight: 200,
+        toolbarHeight: 130,
         elevation: 0,
         backgroundColor: Color.fromRGBO(53, 66, 89, 1),
         title: Column(
