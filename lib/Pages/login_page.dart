@@ -4,7 +4,7 @@ import 'package:tougo/components/my_textfield.dart';
 import 'package:tougo/main.dart';
 import 'package:tougo/Pages/stories.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:tougo/navbar_bot.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -126,32 +126,82 @@ class LoginPage extends StatelessWidget {
         // ),
 
         const SizedBox(height: 5),
-
-        // sign in gugel
         Container(
-          padding: EdgeInsets.all(15),
-          margin: EdgeInsets.symmetric(horizontal: 25),
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              backgroundColor: const Color.fromRGBO(53, 66, 89, 1.0),
-            ),
-            child: Text(
-              'Sign in',
-              style: GoogleFonts.poppins(
-                  fontSize: 12, fontWeight: FontWeight.w500),
-              selectionColor: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Stories();
-              }));
-            },
+          width: 150,
+          height: 40,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Color.fromRGBO(122, 150, 199, 1.0),
           ),
-        )
+          child: Material(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Navbar_bot()));
+              },
+              child: Center(
+                child: Text(
+                  "Sign in",
+                  style: GoogleFonts.poppins(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
+                  selectionColor: Colors.white,
+                ),
+              ),
+            ),
+          ),
+        ),
+        // sign in gugel
       ],
     );
   }
 }
+
+        // Container(
+        //   width: 150,
+        //   height: 40,
+        //   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+        //   child: Material(
+        //     color: Color.fromRGBO(122, 150, 199, 1.0),
+        //     child: InkWell(
+        //       onTap: () {
+        //         Navigator.pushReplacement(context,
+        //             MaterialPageRoute(builder: (context) => Navbar_bot()));
+        //       },
+        //       child: Container(
+        //         child: Center(
+        //           child: Text(
+        //             'Sign in',
+        //             style: GoogleFonts.poppins(
+        //                 fontSize: 12,
+        //                 fontWeight: FontWeight.w500,
+        //                 color: Colors.white),
+        //             selectionColor: Colors.white,
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ),
+        // )
+
+// ElevatedButton(
+//             style: ElevatedButton.styleFrom(
+//               shape: RoundedRectangleBorder(
+//                 borderRadius: BorderRadius.circular(8),
+//               ),
+//               backgroundColor: const Color.fromRGBO(53, 66, 89, 1.0),
+//             ),
+//             child: Text(
+//               'Sign in',
+//               style: GoogleFonts.poppins(
+//                   fontSize: 12, fontWeight: FontWeight.w500),
+//               selectionColor: Colors.white,
+//             ),
+//             onPressed: () {
+//               Navigator.push(context,
+//                   MaterialPageRoute(builder: (context) => Navbar_bot()));
+//             },
+//           ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tougo/Pages/menu.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tougo/navbar_bot.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({super.key});
@@ -81,28 +82,6 @@ class AboutUs extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: GNav(tabs: const [
-        GButton(
-          icon: Icons.info,
-          text: "About Us",
-          iconColor: Colors.white,
-        ),
-        GButton(
-          icon: Icons.search,
-          text: "search",
-          iconColor: Colors.white,
-        ),
-        GButton(
-          icon: Icons.book,
-          text: "Stories",
-          iconColor: Colors.white,
-        ),
-        GButton(
-          icon: Icons.airplane_ticket,
-          text: "Destination",
-          iconColor: Colors.white,
-        ),
-      ]),
     );
   }
 }

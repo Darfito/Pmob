@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tougo/Pages/menu.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:tougo/navbar_bot.dart';
 
 class Stories extends StatelessWidget {
   const Stories({super.key});
@@ -289,27 +290,11 @@ class Stories extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: GNav(tabs: const [
-        GButton(
-          icon: Icons.info,
-          text: "About Us",
-        ),
-        GButton(
-          icon: Icons.search,
-          text: "search",
-        ),
-        GButton(
-          icon: Icons.book,
-          text: "Stories",
-        ),
-        GButton(
-          icon: Icons.airplane_ticket,
-          text: "Destination",
-        ),
-      ]),
     );
   }
 }
+
+
 
 // Text(
 //   "Histories, East Java",
