@@ -9,11 +9,20 @@ class Destinations extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TopBar(context),
-      body: Column(
+      body: ListView(
         children: [
           Image.asset(
-            "assets/images/Destination_pages/destination.png",
-          )
+            "assets/images/destination_page/destination.png",
+          ),
+          Image.asset(
+            "assets/images/destination_page/central-java.jpeg",
+          ),
+          Image.asset(
+            "assets/images/destination_page/east-java.jpeg",
+          ),
+          Image.asset(
+            "assets/images/destination_page/west-java.jpeg",
+          ),
         ],
       ),
     );
@@ -113,7 +122,7 @@ class Destinations extends StatelessWidget {
     //                           decoration: BoxDecoration(
     //                               image: DecorationImage(
     //                                   image: AssetImage(
-    //                                       "assets/images/Destination_pages/destination.png"),
+    //                                       "assets/images/Destination_pages/destination.jpeg"),
     //                                   fit: BoxFit.cover),
     //                               borderRadius: BorderRadius.circular(20)),
     //                           child: Column(
