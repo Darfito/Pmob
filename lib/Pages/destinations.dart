@@ -13,15 +13,76 @@ class Destinations extends StatelessWidget {
         children: [
           Image.asset(
             "assets/images/destination_page/destination.png",
+            height: 300,
           ),
-          Image.asset(
-            "assets/images/destination_page/central-java.jpeg",
+          Center(
+              child: Text(
+            "Destination",
+            style:
+                GoogleFonts.poppins(fontWeight: FontWeight.w600, fontSize: 32),
+          )),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image.asset(
+                  "assets/images/destination_page/central-java.jpeg",
+                ),
+              ),
+            ),
           ),
-          Image.asset(
-            "assets/images/destination_page/east-java.jpeg",
+          Padding(
+            padding: const EdgeInsets.only(left: 11.0),
+            child: Text(
+              "Center Java",
+              style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.w600, fontSize: 18),
+            ),
           ),
-          Image.asset(
-            "assets/images/destination_page/west-java.jpeg",
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image.asset(
+                  "assets/images/destination_page/east-java.jpeg",
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 11.0),
+            child: Text(
+              "East Java",
+              style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.w600, fontSize: 18),
+            ),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15.0),
+                child: Image.asset(
+                  "assets/images/destination_page/west-java.jpeg",
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 11.0),
+            child: Text(
+              "West Java",
+              style: GoogleFonts.poppins(
+                  fontWeight: FontWeight.w600, fontSize: 18),
+            ),
           ),
         ],
       ),
