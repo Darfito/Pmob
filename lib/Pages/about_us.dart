@@ -72,7 +72,7 @@ class AboutUs extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Expanded(
                 child: Text(
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type ",
+              "Selamat datang di Aplikasi Tougo! Kami adalah aplikasi yang berfokus pada cerita-cerita mitos dan sejarah dari berbagai daerah di Indonesia. Tim kami memastikan bahwa setiap cerita yang kami berikan adalah akurat dan informatif. Kami memahami betapa pentingnya cerita dalam budaya manusia, dan kami ingin memperkenalkan cerita-cerita ini kepada semua orang. Dalam aplikasi kami, Anda akan menemukan berbagai cerita mitos dan sejarah dari berbagai daerah, semuanya tersedia dalam format yang mudah diakses dan mudah dipahami.Tujuan kami adalah untuk membantu memperkaya pemahaman Anda tentang sejarah dan mitologi dunia, serta memberikan hiburan yang menghibur dan mendidik. Kami berharap bahwa Aplikasi Tougo akan menjadi sumber informasi dan inspirasi yang tak ternilai bagi Anda. Terima kasih telah memilih Aplikasi Tougo.",
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
