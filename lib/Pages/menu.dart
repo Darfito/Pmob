@@ -1,5 +1,8 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:tougo/main.dart';
+import 'package:tougo/Pages/Notification.dart';
+import 'package:tougo/Pages/profile_user.dart';
 import 'package:tougo/Pages/stories.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tougo/Pages/about_us.dart';
@@ -38,7 +41,14 @@ class Menu extends StatelessWidget {
                 fontSize: 24,
               ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            trailing: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileScreen()));
+                },
+                child: Icon(Icons.arrow_forward_ios, color: Colors.white)),
           ),
           ListTile(
             leading: Icon(Icons.notifications, color: Colors.white),
@@ -49,30 +59,27 @@ class Menu extends StatelessWidget {
                 fontSize: 24,
               ),
             ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+            trailing: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Notif_tou()));
+                },
+                child: Icon(Icons.arrow_forward_ios, color: Colors.white)),
           ),
-          ListTile(
-            leading: Icon(Icons.help, color: Colors.white),
-            title: Text(
-              'Help',
-              style: GoogleFonts.poppins(
-                color: Colors.white,
-                fontSize: 24,
-              ),
-            ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
-          ),
-          ListTile(
-            leading: Icon(Icons.logout, color: Colors.white),
-            title: Text(
-              'Log Out',
-              style: GoogleFonts.poppins(
-                color: Colors.white,
-                fontSize: 24,
-              ),
-            ),
-            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
-          ),
+          // ListTile(
+          //   leading: Icon(Icons.help, color: Colors.white),
+          //   title: Text(
+          //     'Help',
+          //     style: GoogleFonts.poppins(
+          //       color: Colors.white,
+          //       fontSize: 24,
+          //     ),
+          //   ),
+          //   trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
+          // ),
+
           ListTile(
             leading: Icon(Icons.info, color: Colors.white),
             title: Text(
@@ -122,6 +129,17 @@ class Menu extends StatelessWidget {
                           builder: (context) => const Destinations()));
                 },
                 child: Icon(Icons.arrow_forward_ios, color: Colors.white)),
+          ),
+          ListTile(
+            leading: Icon(Icons.logout, color: Colors.white),
+            title: Text(
+              'Log Out',
+              style: GoogleFonts.poppins(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.white),
           ),
         ],
       ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tougo/Pages/Search.dart';
-import 'package:tougo/main.dart';
 import 'package:tougo/Pages/stories.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:tougo/Pages/about_us.dart';
 import 'package:tougo/Pages/destinations.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
