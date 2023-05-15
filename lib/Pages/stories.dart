@@ -9,6 +9,7 @@ class Stories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        
         automaticallyImplyLeading: false,
         toolbarHeight: 200,
         elevation: 0,

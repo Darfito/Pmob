@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:tougo/Pages/Notification.dart';
 import 'package:tougo/Pages/profile_user.dart';

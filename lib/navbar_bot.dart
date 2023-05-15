@@ -12,8 +12,8 @@ class Navbar_bot extends StatefulWidget {
   List<Widget> pages = [
     const Stories(),
     const AboutUs(),
-    const Search(),
     const Destinations(),
+    // const Search(),
   ];
 }
 
@@ -23,11 +23,11 @@ class _NavbarState extends State<Navbar_bot> {
     return Scaffold(
       body: widget.pages[widget.currentIndex],
       bottomNavigationBar: Container(
-        color: Color.fromRGBO(122, 150, 199, 1.0),
+        color: const Color.fromRGBO(122, 150, 199, 1.0),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
           child: GNav(
-              backgroundColor: Color.fromRGBO(122, 150, 199, 1.0),
+              backgroundColor: const Color.fromRGBO(122, 150, 199, 1.0),
               color: Colors.white,
               tabBackgroundColor: Colors.white,
               iconSize: 15,
@@ -40,22 +40,22 @@ class _NavbarState extends State<Navbar_bot> {
               selectedIndex: 0,
               // backgroundColor: Color.fromRGBO(r, g, b, opacity),
               tabs: [
-                GButton(
+                const GButton(
                   icon: Icons.book,
                   text: "Stories",
                 ),
-                GButton(
+                const GButton(
                   icon: Icons.info,
                   text: "About Us",
                 ),
-                GButton(
-                  icon: Icons.search,
-                  text: "search",
-                ),
-                GButton(
+                const GButton(
                   icon: Icons.airplane_ticket,
                   text: "Destination",
                 ),
+                // const GButton(
+                //   icon: Icons.search,
+                //   text: "search",
+                // ),
               ]),
         ),
       ),

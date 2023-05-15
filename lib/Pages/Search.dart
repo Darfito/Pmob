@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:tougo/navbar_bot.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -14,14 +10,43 @@ class Search extends StatefulWidget {
 class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+              onPressed: () {
+                showSearch(
+                  context: context,
+                  delegate: CustomsSearchDelegate(),
+                );
+              },
+              icon: const Icon(Icons.search))
+        ],
+      ),
+    );
+    // FutureBuilder(
+    //   future: showSearch(context: context, delegate: CustomsSearchDelegate()),
+    //   builder: (BuildContext context, snapshot) {
+    //     if (snapshot.hasData) {
+    //       return Text(snapshot.data);
+    //     }
+    //     return const Text('No');
+    //   },
+    // );
   }
 }
 
-class CustomSearch extends SearchDelegate {
-  List<String> allData = ['Surabaya', 'Madiun', 'Gresik', 'Malang'];
+class CustomsSearchDelegate extends SearchDelegate {
+  List<String> searchTerms = [
+    'Jawa Tengah',
+    'Jawa Timur',
+    'Jawa Barat',
+    'Bandung',
+    'Jakarta',
+  ];
+
   @override
-  List<Widget>? buildActions(BuildContext context) {
+  List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
           onPressed: () {
@@ -32,20 +57,19 @@ class CustomSearch extends SearchDelegate {
   }
 
   @override
-  Widget? buildLeading(BuildContext context) {
+  Widget buildLeading(BuildContext context) {
     return IconButton(
         onPressed: () {
           close(context, null);
         },
-        icon: Icon(Icons.arrow_back));
+        icon: const Icon(Icons.arrow_back));
   }
 
-  @override
-  Widget buildSuggestions(BuildContext context) {
+  Widget buildResults(BuildContext context) {
     List<String> matchQuery = [];
-    for (var item in allData) {
-      if (item.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(item);
+    for (var tempat in searchTerms) {
+      if (tempat.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(tempat);
       }
     }
     return ListView.builder(
@@ -58,12 +82,11 @@ class CustomSearch extends SearchDelegate {
         });
   }
 
-  @override
-  Widget buildResults(BuildContext context) {
+  Widget buildSuggestions(BuildContext context) {
     List<String> matchQuery = [];
-    for (var item in allData) {
-      if (item.toLowerCase().contains(query.toLowerCase())) {
-        matchQuery.add(item);
+    for (var tempat in searchTerms) {
+      if (tempat.toLowerCase().contains(query.toLowerCase())) {
+        matchQuery.add(tempat);
       }
     }
     return ListView.builder(
