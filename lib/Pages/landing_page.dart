@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tougo/Pages/login_page.dart';
+import 'package:tougo/Pages/auth_page.dart';
 import 'package:tougo/main.dart';
 
 class LandingPage extends StatelessWidget {
